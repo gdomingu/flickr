@@ -1,0 +1,27 @@
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: flickr_development
+  pool: 5
+  username: Gabriel
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: flickr_test
+  pool: 5
+  username: Gabriel
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: flickr_production
+  pool: 5
+  username: Gabriel
+  password:
