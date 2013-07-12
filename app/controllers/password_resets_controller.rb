@@ -16,5 +16,10 @@ class PasswordResetsController < ApplicationController
     @user = User.load_from_reset_password_token(params[:token])
     not_authenticated and return unless @user
     @user.password_confirmation = params[:user][:password_confirmation]
+    if @user.change_password!(params[:user][:password])
+      redirect_to(root_path, :notice => "Password successfully updated!")
+    else
+      render :action => "edit"
+    end
   end
 end
